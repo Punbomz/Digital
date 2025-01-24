@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Dec  8 02:52:34 2024
+# Process ID         : 42816
+# Current directory  : E:/University/Digital/monkey game/monkey game.runs/impl_1
+# Command line       : vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file           : E:/University/Digital/monkey game/monkey game.runs/impl_1/top.vdi
+# Journal file       : E:/University/Digital/monkey game/monkey game.runs/impl_1\vivado.jou
+# Running On         : Puntakant
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 7 4800H with Radeon Graphics         
+# CPU Frequency      : 2895 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16556 MB
+# Swap memory        : 14991 MB
+# Total Virtual      : 31548 MB
+# Available Virtual  : 5733 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

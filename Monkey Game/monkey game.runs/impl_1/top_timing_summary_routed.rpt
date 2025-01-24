@@ -1,0 +1,1023 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Sun Dec  8 03:18:06 2024
+| Host         : Puntakant running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
+| Design       : top
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                  Violations  
+---------  ----------------  ---------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell  155         
+SYNTH-10   Warning           Wide multiplier              6           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (175)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (403)
+5. checking no_input_delay (3)
+6. checking no_output_delay (22)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (175)
+--------------------------
+ There are 135 register/latch pins with no clock driven by root clock pin: clk_100MHz (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: vga/r_25MHz_reg[0]/Q (HIGH)
+
+ There are 20 register/latch pins with no clock driven by root clock pin: vga/r_25MHz_reg[1]/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (403)
+--------------------------------------------------
+ There are 403 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (3)
+------------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (22)
+--------------------------------
+ There are 22 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  425          inf        0.000                      0                  425           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           425 Endpoints
+Min Delay           425 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 game_logic/circle_x_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            rgb[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        25.689ns  (logic 13.512ns (52.600%)  route 12.177ns (47.400%))
+  Logic Levels:           19  (CARRY4=8 DSP48E1=2 FDCE=1 LUT2=3 LUT4=2 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y21          FDCE                         0.000     0.000 r  game_logic/circle_x_reg[0]/C
+    SLICE_X4Y21          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  game_logic/circle_x_reg[0]/Q
+                         net (fo=12, routed)          1.769     2.225    vga/rgb3__4[0]
+    SLICE_X5Y15          LUT2 (Prop_lut2_I1_O)        0.124     2.349 r  vga/i__carry_i_4__1/O
+                         net (fo=1, routed)           0.000     2.349    game_logic/rgb3__4_1[0]
+    SLICE_X5Y15          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.881 r  game_logic/rgb4_inferred__0/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     2.881    game_logic/rgb4_inferred__0/i__carry_n_0
+    SLICE_X5Y16          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.995 r  game_logic/rgb4_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.995    game_logic/rgb4_inferred__0/i__carry__0_n_0
+    SLICE_X5Y17          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     3.234 r  game_logic/rgb4_inferred__0/i__carry__1/O[2]
+                         net (fo=58, routed)          1.254     4.488    game_logic/rgb4[31]
+    DSP48_X0Y7           DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.214     8.702 r  game_logic/rgb3__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     8.704    game_logic/rgb3__3_n_106
+    DSP48_X0Y8           DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    10.222 r  game_logic/rgb3__4/P[0]
+                         net (fo=2, routed)           1.185    11.407    game_logic/rgb3__4_n_105
+    SLICE_X12Y20         LUT2 (Prop_lut2_I0_O)        0.124    11.531 r  game_logic/i__carry_i_3__2/O
+                         net (fo=1, routed)           0.000    11.531    game_logic/i__carry_i_3__2_n_0
+    SLICE_X12Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.064 r  game_logic/rgb3_inferred__1/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    12.064    game_logic/rgb3_inferred__1/i__carry_n_0
+    SLICE_X12Y21         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    12.379 r  game_logic/rgb3_inferred__1/i__carry__0/O[3]
+                         net (fo=2, routed)           1.187    13.567    game_logic/rgb3_inferred__1/i__carry__0_n_4
+    SLICE_X13Y17         LUT2 (Prop_lut2_I0_O)        0.307    13.874 r  game_logic/i__carry__4_i_1/O
+                         net (fo=1, routed)           0.000    13.874    game_logic/i__carry__4_i_1_n_0
+    SLICE_X13Y17         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    14.275 r  game_logic/rgb2_inferred__0/i__carry__4/CO[3]
+                         net (fo=1, routed)           0.000    14.275    game_logic/rgb2_inferred__0/i__carry__4_n_0
+    SLICE_X13Y18         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.389 r  game_logic/rgb2_inferred__0/i__carry__5/CO[3]
+                         net (fo=1, routed)           0.000    14.389    game_logic/rgb2_inferred__0/i__carry__5_n_0
+    SLICE_X13Y19         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    14.702 f  game_logic/rgb2_inferred__0/i__carry__6/O[3]
+                         net (fo=1, routed)           0.887    15.589    game_logic/rgb2[31]
+    SLICE_X14Y16         LUT4 (Prop_lut4_I3_O)        0.306    15.895 f  game_logic/rgb_OBUF[7]_inst_i_9/O
+                         net (fo=1, routed)           0.821    16.716    game_logic/rgb_OBUF[7]_inst_i_9_n_0
+    SLICE_X14Y15         LUT5 (Prop_lut5_I4_O)        0.124    16.840 f  game_logic/rgb_OBUF[7]_inst_i_8/O
+                         net (fo=1, routed)           0.869    17.708    game_logic/rgb_OBUF[7]_inst_i_8_n_0
+    SLICE_X14Y16         LUT6 (Prop_lut6_I5_O)        0.124    17.832 f  game_logic/rgb_OBUF[7]_inst_i_3/O
+                         net (fo=1, routed)           0.953    18.786    vga/rgb[4]_0
+    SLICE_X6Y16          LUT4 (Prop_lut4_I3_O)        0.124    18.910 r  vga/rgb_OBUF[7]_inst_i_1/O
+                         net (fo=4, routed)           3.249    22.159    rgb_OBUF[4]
+    D17                  OBUF (Prop_obuf_I_O)         3.530    25.689 r  rgb_OBUF[7]_inst/O
+                         net (fo=0)                   0.000    25.689    rgb[7]
+    D17                                                               r  rgb[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/circle_x_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            rgb[5]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        25.186ns  (logic 13.487ns (53.552%)  route 11.698ns (46.448%))
+  Logic Levels:           19  (CARRY4=8 DSP48E1=2 FDCE=1 LUT2=3 LUT4=2 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y21          FDCE                         0.000     0.000 r  game_logic/circle_x_reg[0]/C
+    SLICE_X4Y21          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  game_logic/circle_x_reg[0]/Q
+                         net (fo=12, routed)          1.769     2.225    vga/rgb3__4[0]
+    SLICE_X5Y15          LUT2 (Prop_lut2_I1_O)        0.124     2.349 r  vga/i__carry_i_4__1/O
+                         net (fo=1, routed)           0.000     2.349    game_logic/rgb3__4_1[0]
+    SLICE_X5Y15          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.881 r  game_logic/rgb4_inferred__0/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     2.881    game_logic/rgb4_inferred__0/i__carry_n_0
+    SLICE_X5Y16          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.995 r  game_logic/rgb4_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.995    game_logic/rgb4_inferred__0/i__carry__0_n_0
+    SLICE_X5Y17          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     3.234 r  game_logic/rgb4_inferred__0/i__carry__1/O[2]
+                         net (fo=58, routed)          1.254     4.488    game_logic/rgb4[31]
+    DSP48_X0Y7           DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.214     8.702 r  game_logic/rgb3__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     8.704    game_logic/rgb3__3_n_106
+    DSP48_X0Y8           DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    10.222 r  game_logic/rgb3__4/P[0]
+                         net (fo=2, routed)           1.185    11.407    game_logic/rgb3__4_n_105
+    SLICE_X12Y20         LUT2 (Prop_lut2_I0_O)        0.124    11.531 r  game_logic/i__carry_i_3__2/O
+                         net (fo=1, routed)           0.000    11.531    game_logic/i__carry_i_3__2_n_0
+    SLICE_X12Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.064 r  game_logic/rgb3_inferred__1/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    12.064    game_logic/rgb3_inferred__1/i__carry_n_0
+    SLICE_X12Y21         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    12.379 r  game_logic/rgb3_inferred__1/i__carry__0/O[3]
+                         net (fo=2, routed)           1.187    13.567    game_logic/rgb3_inferred__1/i__carry__0_n_4
+    SLICE_X13Y17         LUT2 (Prop_lut2_I0_O)        0.307    13.874 r  game_logic/i__carry__4_i_1/O
+                         net (fo=1, routed)           0.000    13.874    game_logic/i__carry__4_i_1_n_0
+    SLICE_X13Y17         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    14.275 r  game_logic/rgb2_inferred__0/i__carry__4/CO[3]
+                         net (fo=1, routed)           0.000    14.275    game_logic/rgb2_inferred__0/i__carry__4_n_0
+    SLICE_X13Y18         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.389 r  game_logic/rgb2_inferred__0/i__carry__5/CO[3]
+                         net (fo=1, routed)           0.000    14.389    game_logic/rgb2_inferred__0/i__carry__5_n_0
+    SLICE_X13Y19         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    14.702 f  game_logic/rgb2_inferred__0/i__carry__6/O[3]
+                         net (fo=1, routed)           0.887    15.589    game_logic/rgb2[31]
+    SLICE_X14Y16         LUT4 (Prop_lut4_I3_O)        0.306    15.895 f  game_logic/rgb_OBUF[7]_inst_i_9/O
+                         net (fo=1, routed)           0.821    16.716    game_logic/rgb_OBUF[7]_inst_i_9_n_0
+    SLICE_X14Y15         LUT5 (Prop_lut5_I4_O)        0.124    16.840 f  game_logic/rgb_OBUF[7]_inst_i_8/O
+                         net (fo=1, routed)           0.869    17.708    game_logic/rgb_OBUF[7]_inst_i_8_n_0
+    SLICE_X14Y16         LUT6 (Prop_lut6_I5_O)        0.124    17.832 f  game_logic/rgb_OBUF[7]_inst_i_3/O
+                         net (fo=1, routed)           0.953    18.786    vga/rgb[4]_0
+    SLICE_X6Y16          LUT4 (Prop_lut4_I3_O)        0.124    18.910 r  vga/rgb_OBUF[7]_inst_i_1/O
+                         net (fo=4, routed)           2.770    21.680    rgb_OBUF[4]
+    H17                  OBUF (Prop_obuf_I_O)         3.505    25.186 r  rgb_OBUF[5]_inst/O
+                         net (fo=0)                   0.000    25.186    rgb[5]
+    H17                                                               r  rgb[5] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/circle_x_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            rgb[6]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        25.058ns  (logic 13.511ns (53.919%)  route 11.547ns (46.081%))
+  Logic Levels:           19  (CARRY4=8 DSP48E1=2 FDCE=1 LUT2=3 LUT4=2 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y21          FDCE                         0.000     0.000 r  game_logic/circle_x_reg[0]/C
+    SLICE_X4Y21          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  game_logic/circle_x_reg[0]/Q
+                         net (fo=12, routed)          1.769     2.225    vga/rgb3__4[0]
+    SLICE_X5Y15          LUT2 (Prop_lut2_I1_O)        0.124     2.349 r  vga/i__carry_i_4__1/O
+                         net (fo=1, routed)           0.000     2.349    game_logic/rgb3__4_1[0]
+    SLICE_X5Y15          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.881 r  game_logic/rgb4_inferred__0/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     2.881    game_logic/rgb4_inferred__0/i__carry_n_0
+    SLICE_X5Y16          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.995 r  game_logic/rgb4_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.995    game_logic/rgb4_inferred__0/i__carry__0_n_0
+    SLICE_X5Y17          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     3.234 r  game_logic/rgb4_inferred__0/i__carry__1/O[2]
+                         net (fo=58, routed)          1.254     4.488    game_logic/rgb4[31]
+    DSP48_X0Y7           DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.214     8.702 r  game_logic/rgb3__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     8.704    game_logic/rgb3__3_n_106
+    DSP48_X0Y8           DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    10.222 r  game_logic/rgb3__4/P[0]
+                         net (fo=2, routed)           1.185    11.407    game_logic/rgb3__4_n_105
+    SLICE_X12Y20         LUT2 (Prop_lut2_I0_O)        0.124    11.531 r  game_logic/i__carry_i_3__2/O
+                         net (fo=1, routed)           0.000    11.531    game_logic/i__carry_i_3__2_n_0
+    SLICE_X12Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.064 r  game_logic/rgb3_inferred__1/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    12.064    game_logic/rgb3_inferred__1/i__carry_n_0
+    SLICE_X12Y21         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    12.379 r  game_logic/rgb3_inferred__1/i__carry__0/O[3]
+                         net (fo=2, routed)           1.187    13.567    game_logic/rgb3_inferred__1/i__carry__0_n_4
+    SLICE_X13Y17         LUT2 (Prop_lut2_I0_O)        0.307    13.874 r  game_logic/i__carry__4_i_1/O
+                         net (fo=1, routed)           0.000    13.874    game_logic/i__carry__4_i_1_n_0
+    SLICE_X13Y17         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    14.275 r  game_logic/rgb2_inferred__0/i__carry__4/CO[3]
+                         net (fo=1, routed)           0.000    14.275    game_logic/rgb2_inferred__0/i__carry__4_n_0
+    SLICE_X13Y18         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.389 r  game_logic/rgb2_inferred__0/i__carry__5/CO[3]
+                         net (fo=1, routed)           0.000    14.389    game_logic/rgb2_inferred__0/i__carry__5_n_0
+    SLICE_X13Y19         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    14.702 f  game_logic/rgb2_inferred__0/i__carry__6/O[3]
+                         net (fo=1, routed)           0.887    15.589    game_logic/rgb2[31]
+    SLICE_X14Y16         LUT4 (Prop_lut4_I3_O)        0.306    15.895 f  game_logic/rgb_OBUF[7]_inst_i_9/O
+                         net (fo=1, routed)           0.821    16.716    game_logic/rgb_OBUF[7]_inst_i_9_n_0
+    SLICE_X14Y15         LUT5 (Prop_lut5_I4_O)        0.124    16.840 f  game_logic/rgb_OBUF[7]_inst_i_8/O
+                         net (fo=1, routed)           0.869    17.708    game_logic/rgb_OBUF[7]_inst_i_8_n_0
+    SLICE_X14Y16         LUT6 (Prop_lut6_I5_O)        0.124    17.832 f  game_logic/rgb_OBUF[7]_inst_i_3/O
+                         net (fo=1, routed)           0.953    18.786    vga/rgb[4]_0
+    SLICE_X6Y16          LUT4 (Prop_lut4_I3_O)        0.124    18.910 r  vga/rgb_OBUF[7]_inst_i_1/O
+                         net (fo=4, routed)           2.619    21.529    rgb_OBUF[4]
+    G17                  OBUF (Prop_obuf_I_O)         3.529    25.058 r  rgb_OBUF[6]_inst/O
+                         net (fo=0)                   0.000    25.058    rgb[6]
+    G17                                                               r  rgb[6] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/circle_x_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            rgb[4]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        24.757ns  (logic 13.503ns (54.542%)  route 11.254ns (45.458%))
+  Logic Levels:           19  (CARRY4=8 DSP48E1=2 FDCE=1 LUT2=3 LUT4=2 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X4Y21          FDCE                         0.000     0.000 r  game_logic/circle_x_reg[0]/C
+    SLICE_X4Y21          FDCE (Prop_fdce_C_Q)         0.456     0.456 r  game_logic/circle_x_reg[0]/Q
+                         net (fo=12, routed)          1.769     2.225    vga/rgb3__4[0]
+    SLICE_X5Y15          LUT2 (Prop_lut2_I1_O)        0.124     2.349 r  vga/i__carry_i_4__1/O
+                         net (fo=1, routed)           0.000     2.349    game_logic/rgb3__4_1[0]
+    SLICE_X5Y15          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     2.881 r  game_logic/rgb4_inferred__0/i__carry/CO[3]
+                         net (fo=1, routed)           0.000     2.881    game_logic/rgb4_inferred__0/i__carry_n_0
+    SLICE_X5Y16          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.995 r  game_logic/rgb4_inferred__0/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.995    game_logic/rgb4_inferred__0/i__carry__0_n_0
+    SLICE_X5Y17          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     3.234 r  game_logic/rgb4_inferred__0/i__carry__1/O[2]
+                         net (fo=58, routed)          1.254     4.488    game_logic/rgb4[31]
+    DSP48_X0Y7           DSP48E1 (Prop_dsp48e1_A[16]_PCOUT[47])
+                                                      4.214     8.702 r  game_logic/rgb3__3/PCOUT[47]
+                         net (fo=1, routed)           0.002     8.704    game_logic/rgb3__3_n_106
+    DSP48_X0Y8           DSP48E1 (Prop_dsp48e1_PCIN[47]_P[0])
+                                                      1.518    10.222 r  game_logic/rgb3__4/P[0]
+                         net (fo=2, routed)           1.185    11.407    game_logic/rgb3__4_n_105
+    SLICE_X12Y20         LUT2 (Prop_lut2_I0_O)        0.124    11.531 r  game_logic/i__carry_i_3__2/O
+                         net (fo=1, routed)           0.000    11.531    game_logic/i__carry_i_3__2_n_0
+    SLICE_X12Y20         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.064 r  game_logic/rgb3_inferred__1/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    12.064    game_logic/rgb3_inferred__1/i__carry_n_0
+    SLICE_X12Y21         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315    12.379 r  game_logic/rgb3_inferred__1/i__carry__0/O[3]
+                         net (fo=2, routed)           1.187    13.567    game_logic/rgb3_inferred__1/i__carry__0_n_4
+    SLICE_X13Y17         LUT2 (Prop_lut2_I0_O)        0.307    13.874 r  game_logic/i__carry__4_i_1/O
+                         net (fo=1, routed)           0.000    13.874    game_logic/i__carry__4_i_1_n_0
+    SLICE_X13Y17         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    14.275 r  game_logic/rgb2_inferred__0/i__carry__4/CO[3]
+                         net (fo=1, routed)           0.000    14.275    game_logic/rgb2_inferred__0/i__carry__4_n_0
+    SLICE_X13Y18         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.389 r  game_logic/rgb2_inferred__0/i__carry__5/CO[3]
+                         net (fo=1, routed)           0.000    14.389    game_logic/rgb2_inferred__0/i__carry__5_n_0
+    SLICE_X13Y19         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    14.702 f  game_logic/rgb2_inferred__0/i__carry__6/O[3]
+                         net (fo=1, routed)           0.887    15.589    game_logic/rgb2[31]
+    SLICE_X14Y16         LUT4 (Prop_lut4_I3_O)        0.306    15.895 f  game_logic/rgb_OBUF[7]_inst_i_9/O
+                         net (fo=1, routed)           0.821    16.716    game_logic/rgb_OBUF[7]_inst_i_9_n_0
+    SLICE_X14Y15         LUT5 (Prop_lut5_I4_O)        0.124    16.840 f  game_logic/rgb_OBUF[7]_inst_i_8/O
+                         net (fo=1, routed)           0.869    17.708    game_logic/rgb_OBUF[7]_inst_i_8_n_0
+    SLICE_X14Y16         LUT6 (Prop_lut6_I5_O)        0.124    17.832 f  game_logic/rgb_OBUF[7]_inst_i_3/O
+                         net (fo=1, routed)           0.953    18.786    vga/rgb[4]_0
+    SLICE_X6Y16          LUT4 (Prop_lut4_I3_O)        0.124    18.910 r  vga/rgb_OBUF[7]_inst_i_1/O
+                         net (fo=4, routed)           2.327    21.236    rgb_OBUF[4]
+    J17                  OBUF (Prop_obuf_I_O)         3.521    24.757 r  rgb_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    24.757    rgb[4]
+    J17                                                               r  rgb[4] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/rand_seed_reg[6]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            game_logic/circle_x_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.087ns  (logic 5.638ns (40.021%)  route 8.449ns (59.979%))
+  Logic Levels:           19  (CARRY4=8 FDPE=1 LUT1=1 LUT2=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y21          FDPE                         0.000     0.000 r  game_logic/rand_seed_reg[6]/C
+    SLICE_X8Y21          FDPE (Prop_fdpe_C_Q)         0.518     0.518 r  game_logic/rand_seed_reg[6]/Q
+                         net (fo=11, routed)          1.090     1.608    game_logic/rand_seed[6]
+    SLICE_X7Y22          LUT3 (Prop_lut3_I0_O)        0.124     1.732 r  game_logic/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.881     2.614    game_logic/i___0_carry__0_i_3_n_0
+    SLICE_X6Y22          LUT4 (Prop_lut4_I3_O)        0.124     2.738 r  game_logic/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     2.738    game_logic/i___0_carry__0_i_7_n_0
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.271 r  game_logic/circle_x1_inferred__1/i___0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.271    game_logic/circle_x1_inferred__1/i___0_carry__0_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  game_logic/circle_x1_inferred__1/i___0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.388    game_logic/circle_x1_inferred__1/i___0_carry__1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     3.607 f  game_logic/circle_x1_inferred__1/i___0_carry__2/O[0]
+                         net (fo=10, routed)          1.610     5.217    game_logic/circle_x1_inferred__1/i___0_carry__2_n_7
+    SLICE_X5Y23          LUT1 (Prop_lut1_I0_O)        0.295     5.512 r  game_logic/i___41_carry_i_4/O
+                         net (fo=1, routed)           0.000     5.512    game_logic/i___41_carry_i_4_n_0
+    SLICE_X5Y23          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.062 r  game_logic/circle_x1_inferred__1/i___41_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.062    game_logic/circle_x1_inferred__1/i___41_carry_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.301 r  game_logic/circle_x1_inferred__1/i___41_carry__0/O[2]
+                         net (fo=3, routed)           0.437     6.739    game_logic/circle_x1_inferred__1/i___41_carry__0_n_5
+    SLICE_X7Y24          LUT3 (Prop_lut3_I0_O)        0.302     7.041 r  game_logic/i___69_carry_i_1/O
+                         net (fo=2, routed)           0.916     7.957    game_logic/i___69_carry_i_1_n_0
+    SLICE_X4Y24          LUT4 (Prop_lut4_I0_O)        0.124     8.081 r  game_logic/i___69_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.081    game_logic/i___69_carry_i_4_n_0
+    SLICE_X4Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.482 r  game_logic/circle_x1_inferred__1/i___69_carry/CO[3]
+                         net (fo=1, routed)           0.009     8.491    game_logic/circle_x1_inferred__1/i___69_carry_n_0
+    SLICE_X4Y25          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     8.713 r  game_logic/circle_x1_inferred__1/i___69_carry__0/O[0]
+                         net (fo=1, routed)           0.980     9.693    game_logic/circle_x1_inferred__1/i___69_carry__0_n_7
+    SLICE_X5Y22          LUT2 (Prop_lut2_I1_O)        0.299     9.992 r  game_logic/i___84_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     9.992    game_logic/i___84_carry__1_i_2_n_0
+    SLICE_X5Y22          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.572 f  game_logic/circle_x1_inferred__1/i___84_carry__1/O[2]
+                         net (fo=4, routed)           0.785    11.358    game_logic/circle_x1_inferred__1/i___84_carry__1_n_5
+    SLICE_X4Y22          LUT5 (Prop_lut5_I4_O)        0.331    11.689 r  game_logic/circle_x[1]_i_3/O
+                         net (fo=8, routed)           0.631    12.320    game_logic/circle_x[1]_i_3_n_0
+    SLICE_X3Y21          LUT6 (Prop_lut6_I4_O)        0.327    12.647 r  game_logic/circle_x[5]_i_4/O
+                         net (fo=5, routed)           1.108    13.754    game_logic/circle_x[5]_i_4_n_0
+    SLICE_X2Y24          LUT6 (Prop_lut6_I3_O)        0.124    13.878 r  game_logic/circle_x[8]_i_2/O
+                         net (fo=1, routed)           0.000    13.878    game_logic/circle_x[8]_i_2_n_0
+    SLICE_X2Y24          MUXF7 (Prop_muxf7_I0_O)      0.209    14.087 r  game_logic/circle_x_reg[8]_i_1/O
+                         net (fo=1, routed)           0.000    14.087    game_logic/circle_x_reg[8]_i_1_n_0
+    SLICE_X2Y24          FDPE                                         r  game_logic/circle_x_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/rand_seed_reg[6]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            game_logic/circle_x_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.037ns  (logic 5.641ns (40.185%)  route 8.396ns (59.815%))
+  Logic Levels:           19  (CARRY4=8 FDPE=1 LUT1=1 LUT2=1 LUT3=2 LUT4=3 LUT5=1 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y21          FDPE                         0.000     0.000 r  game_logic/rand_seed_reg[6]/C
+    SLICE_X8Y21          FDPE (Prop_fdpe_C_Q)         0.518     0.518 r  game_logic/rand_seed_reg[6]/Q
+                         net (fo=11, routed)          1.090     1.608    game_logic/rand_seed[6]
+    SLICE_X7Y22          LUT3 (Prop_lut3_I0_O)        0.124     1.732 r  game_logic/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.881     2.614    game_logic/i___0_carry__0_i_3_n_0
+    SLICE_X6Y22          LUT4 (Prop_lut4_I3_O)        0.124     2.738 r  game_logic/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     2.738    game_logic/i___0_carry__0_i_7_n_0
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.271 r  game_logic/circle_x1_inferred__1/i___0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.271    game_logic/circle_x1_inferred__1/i___0_carry__0_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  game_logic/circle_x1_inferred__1/i___0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.388    game_logic/circle_x1_inferred__1/i___0_carry__1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     3.607 f  game_logic/circle_x1_inferred__1/i___0_carry__2/O[0]
+                         net (fo=10, routed)          1.610     5.217    game_logic/circle_x1_inferred__1/i___0_carry__2_n_7
+    SLICE_X5Y23          LUT1 (Prop_lut1_I0_O)        0.295     5.512 r  game_logic/i___41_carry_i_4/O
+                         net (fo=1, routed)           0.000     5.512    game_logic/i___41_carry_i_4_n_0
+    SLICE_X5Y23          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.062 r  game_logic/circle_x1_inferred__1/i___41_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.062    game_logic/circle_x1_inferred__1/i___41_carry_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.301 r  game_logic/circle_x1_inferred__1/i___41_carry__0/O[2]
+                         net (fo=3, routed)           0.437     6.739    game_logic/circle_x1_inferred__1/i___41_carry__0_n_5
+    SLICE_X7Y24          LUT3 (Prop_lut3_I0_O)        0.302     7.041 r  game_logic/i___69_carry_i_1/O
+                         net (fo=2, routed)           0.916     7.957    game_logic/i___69_carry_i_1_n_0
+    SLICE_X4Y24          LUT4 (Prop_lut4_I0_O)        0.124     8.081 r  game_logic/i___69_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.081    game_logic/i___69_carry_i_4_n_0
+    SLICE_X4Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.482 r  game_logic/circle_x1_inferred__1/i___69_carry/CO[3]
+                         net (fo=1, routed)           0.009     8.491    game_logic/circle_x1_inferred__1/i___69_carry_n_0
+    SLICE_X4Y25          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     8.713 r  game_logic/circle_x1_inferred__1/i___69_carry__0/O[0]
+                         net (fo=1, routed)           0.980     9.693    game_logic/circle_x1_inferred__1/i___69_carry__0_n_7
+    SLICE_X5Y22          LUT2 (Prop_lut2_I1_O)        0.299     9.992 r  game_logic/i___84_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     9.992    game_logic/i___84_carry__1_i_2_n_0
+    SLICE_X5Y22          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.572 f  game_logic/circle_x1_inferred__1/i___84_carry__1/O[2]
+                         net (fo=4, routed)           0.785    11.358    game_logic/circle_x1_inferred__1/i___84_carry__1_n_5
+    SLICE_X4Y22          LUT5 (Prop_lut5_I4_O)        0.331    11.689 r  game_logic/circle_x[1]_i_3/O
+                         net (fo=8, routed)           0.631    12.320    game_logic/circle_x[1]_i_3_n_0
+    SLICE_X3Y21          LUT6 (Prop_lut6_I4_O)        0.327    12.647 r  game_logic/circle_x[5]_i_4/O
+                         net (fo=5, routed)           1.055    13.701    game_logic/circle_x[5]_i_4_n_0
+    SLICE_X4Y23          LUT4 (Prop_lut4_I0_O)        0.124    13.825 r  game_logic/circle_x[6]_i_2/O
+                         net (fo=1, routed)           0.000    13.825    game_logic/circle_x[6]_i_2_n_0
+    SLICE_X4Y23          MUXF7 (Prop_muxf7_I0_O)      0.212    14.037 r  game_logic/circle_x_reg[6]_i_1/O
+                         net (fo=1, routed)           0.000    14.037    game_logic/circle_x_reg[6]_i_1_n_0
+    SLICE_X4Y23          FDPE                                         r  game_logic/circle_x_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/rand_seed_reg[6]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            game_logic/circle_x_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        14.034ns  (logic 5.641ns (40.196%)  route 8.393ns (59.804%))
+  Logic Levels:           19  (CARRY4=8 FDPE=1 LUT1=1 LUT2=1 LUT3=2 LUT4=2 LUT5=2 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y21          FDPE                         0.000     0.000 r  game_logic/rand_seed_reg[6]/C
+    SLICE_X8Y21          FDPE (Prop_fdpe_C_Q)         0.518     0.518 r  game_logic/rand_seed_reg[6]/Q
+                         net (fo=11, routed)          1.090     1.608    game_logic/rand_seed[6]
+    SLICE_X7Y22          LUT3 (Prop_lut3_I0_O)        0.124     1.732 r  game_logic/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.881     2.614    game_logic/i___0_carry__0_i_3_n_0
+    SLICE_X6Y22          LUT4 (Prop_lut4_I3_O)        0.124     2.738 r  game_logic/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     2.738    game_logic/i___0_carry__0_i_7_n_0
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.271 r  game_logic/circle_x1_inferred__1/i___0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.271    game_logic/circle_x1_inferred__1/i___0_carry__0_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  game_logic/circle_x1_inferred__1/i___0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.388    game_logic/circle_x1_inferred__1/i___0_carry__1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     3.607 f  game_logic/circle_x1_inferred__1/i___0_carry__2/O[0]
+                         net (fo=10, routed)          1.610     5.217    game_logic/circle_x1_inferred__1/i___0_carry__2_n_7
+    SLICE_X5Y23          LUT1 (Prop_lut1_I0_O)        0.295     5.512 r  game_logic/i___41_carry_i_4/O
+                         net (fo=1, routed)           0.000     5.512    game_logic/i___41_carry_i_4_n_0
+    SLICE_X5Y23          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.062 r  game_logic/circle_x1_inferred__1/i___41_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.062    game_logic/circle_x1_inferred__1/i___41_carry_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.301 r  game_logic/circle_x1_inferred__1/i___41_carry__0/O[2]
+                         net (fo=3, routed)           0.437     6.739    game_logic/circle_x1_inferred__1/i___41_carry__0_n_5
+    SLICE_X7Y24          LUT3 (Prop_lut3_I0_O)        0.302     7.041 r  game_logic/i___69_carry_i_1/O
+                         net (fo=2, routed)           0.916     7.957    game_logic/i___69_carry_i_1_n_0
+    SLICE_X4Y24          LUT4 (Prop_lut4_I0_O)        0.124     8.081 r  game_logic/i___69_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.081    game_logic/i___69_carry_i_4_n_0
+    SLICE_X4Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.482 r  game_logic/circle_x1_inferred__1/i___69_carry/CO[3]
+                         net (fo=1, routed)           0.009     8.491    game_logic/circle_x1_inferred__1/i___69_carry_n_0
+    SLICE_X4Y25          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     8.713 r  game_logic/circle_x1_inferred__1/i___69_carry__0/O[0]
+                         net (fo=1, routed)           0.980     9.693    game_logic/circle_x1_inferred__1/i___69_carry__0_n_7
+    SLICE_X5Y22          LUT2 (Prop_lut2_I1_O)        0.299     9.992 r  game_logic/i___84_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     9.992    game_logic/i___84_carry__1_i_2_n_0
+    SLICE_X5Y22          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.572 f  game_logic/circle_x1_inferred__1/i___84_carry__1/O[2]
+                         net (fo=4, routed)           0.785    11.358    game_logic/circle_x1_inferred__1/i___84_carry__1_n_5
+    SLICE_X4Y22          LUT5 (Prop_lut5_I4_O)        0.331    11.689 r  game_logic/circle_x[1]_i_3/O
+                         net (fo=8, routed)           0.720    12.408    game_logic/circle_x[1]_i_3_n_0
+    SLICE_X4Y22          LUT5 (Prop_lut5_I2_O)        0.327    12.735 r  game_logic/circle_x[9]_i_5/O
+                         net (fo=1, routed)           0.962    13.698    game_logic/circle_x[9]_i_5_n_0
+    SLICE_X1Y24          LUT6 (Prop_lut6_I3_O)        0.124    13.822 r  game_logic/circle_x[9]_i_2/O
+                         net (fo=1, routed)           0.000    13.822    game_logic/circle_x[9]_i_2_n_0
+    SLICE_X1Y24          MUXF7 (Prop_muxf7_I0_O)      0.212    14.034 r  game_logic/circle_x_reg[9]_i_1/O
+                         net (fo=1, routed)           0.000    14.034    game_logic/circle_x_reg[9]_i_1_n_0
+    SLICE_X1Y24          FDCE                                         r  game_logic/circle_x_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/rand_seed_reg[6]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            game_logic/circle_x_reg[7]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.742ns  (logic 5.638ns (41.026%)  route 8.104ns (58.974%))
+  Logic Levels:           19  (CARRY4=8 FDPE=1 LUT1=1 LUT2=1 LUT3=2 LUT4=2 LUT5=2 LUT6=1 MUXF7=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y21          FDPE                         0.000     0.000 r  game_logic/rand_seed_reg[6]/C
+    SLICE_X8Y21          FDPE (Prop_fdpe_C_Q)         0.518     0.518 r  game_logic/rand_seed_reg[6]/Q
+                         net (fo=11, routed)          1.090     1.608    game_logic/rand_seed[6]
+    SLICE_X7Y22          LUT3 (Prop_lut3_I0_O)        0.124     1.732 r  game_logic/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.881     2.614    game_logic/i___0_carry__0_i_3_n_0
+    SLICE_X6Y22          LUT4 (Prop_lut4_I3_O)        0.124     2.738 r  game_logic/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     2.738    game_logic/i___0_carry__0_i_7_n_0
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.271 r  game_logic/circle_x1_inferred__1/i___0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.271    game_logic/circle_x1_inferred__1/i___0_carry__0_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  game_logic/circle_x1_inferred__1/i___0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.388    game_logic/circle_x1_inferred__1/i___0_carry__1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     3.607 f  game_logic/circle_x1_inferred__1/i___0_carry__2/O[0]
+                         net (fo=10, routed)          1.610     5.217    game_logic/circle_x1_inferred__1/i___0_carry__2_n_7
+    SLICE_X5Y23          LUT1 (Prop_lut1_I0_O)        0.295     5.512 r  game_logic/i___41_carry_i_4/O
+                         net (fo=1, routed)           0.000     5.512    game_logic/i___41_carry_i_4_n_0
+    SLICE_X5Y23          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.062 r  game_logic/circle_x1_inferred__1/i___41_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.062    game_logic/circle_x1_inferred__1/i___41_carry_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.301 r  game_logic/circle_x1_inferred__1/i___41_carry__0/O[2]
+                         net (fo=3, routed)           0.437     6.739    game_logic/circle_x1_inferred__1/i___41_carry__0_n_5
+    SLICE_X7Y24          LUT3 (Prop_lut3_I0_O)        0.302     7.041 r  game_logic/i___69_carry_i_1/O
+                         net (fo=2, routed)           0.916     7.957    game_logic/i___69_carry_i_1_n_0
+    SLICE_X4Y24          LUT4 (Prop_lut4_I0_O)        0.124     8.081 r  game_logic/i___69_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.081    game_logic/i___69_carry_i_4_n_0
+    SLICE_X4Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.482 r  game_logic/circle_x1_inferred__1/i___69_carry/CO[3]
+                         net (fo=1, routed)           0.009     8.491    game_logic/circle_x1_inferred__1/i___69_carry_n_0
+    SLICE_X4Y25          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     8.713 r  game_logic/circle_x1_inferred__1/i___69_carry__0/O[0]
+                         net (fo=1, routed)           0.980     9.693    game_logic/circle_x1_inferred__1/i___69_carry__0_n_7
+    SLICE_X5Y22          LUT2 (Prop_lut2_I1_O)        0.299     9.992 r  game_logic/i___84_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     9.992    game_logic/i___84_carry__1_i_2_n_0
+    SLICE_X5Y22          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.572 f  game_logic/circle_x1_inferred__1/i___84_carry__1/O[2]
+                         net (fo=4, routed)           0.785    11.358    game_logic/circle_x1_inferred__1/i___84_carry__1_n_5
+    SLICE_X4Y22          LUT5 (Prop_lut5_I4_O)        0.331    11.689 r  game_logic/circle_x[1]_i_3/O
+                         net (fo=8, routed)           0.631    12.320    game_logic/circle_x[1]_i_3_n_0
+    SLICE_X3Y21          LUT6 (Prop_lut6_I4_O)        0.327    12.647 r  game_logic/circle_x[5]_i_4/O
+                         net (fo=5, routed)           0.763    13.409    game_logic/circle_x[5]_i_4_n_0
+    SLICE_X2Y23          LUT5 (Prop_lut5_I1_O)        0.124    13.533 r  game_logic/circle_x[7]_i_2/O
+                         net (fo=1, routed)           0.000    13.533    game_logic/circle_x[7]_i_2_n_0
+    SLICE_X2Y23          MUXF7 (Prop_muxf7_I0_O)      0.209    13.742 r  game_logic/circle_x_reg[7]_i_1/O
+                         net (fo=1, routed)           0.000    13.742    game_logic/circle_x_reg[7]_i_1_n_0
+    SLICE_X2Y23          FDCE                                         r  game_logic/circle_x_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/rand_seed_reg[6]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            game_logic/circle_x_reg[5]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.551ns  (logic 5.429ns (40.064%)  route 8.122ns (59.936%))
+  Logic Levels:           18  (CARRY4=8 FDPE=1 LUT1=1 LUT2=1 LUT3=2 LUT4=2 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y21          FDPE                         0.000     0.000 r  game_logic/rand_seed_reg[6]/C
+    SLICE_X8Y21          FDPE (Prop_fdpe_C_Q)         0.518     0.518 r  game_logic/rand_seed_reg[6]/Q
+                         net (fo=11, routed)          1.090     1.608    game_logic/rand_seed[6]
+    SLICE_X7Y22          LUT3 (Prop_lut3_I0_O)        0.124     1.732 r  game_logic/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.881     2.614    game_logic/i___0_carry__0_i_3_n_0
+    SLICE_X6Y22          LUT4 (Prop_lut4_I3_O)        0.124     2.738 r  game_logic/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     2.738    game_logic/i___0_carry__0_i_7_n_0
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.271 r  game_logic/circle_x1_inferred__1/i___0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.271    game_logic/circle_x1_inferred__1/i___0_carry__0_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  game_logic/circle_x1_inferred__1/i___0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.388    game_logic/circle_x1_inferred__1/i___0_carry__1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     3.607 f  game_logic/circle_x1_inferred__1/i___0_carry__2/O[0]
+                         net (fo=10, routed)          1.610     5.217    game_logic/circle_x1_inferred__1/i___0_carry__2_n_7
+    SLICE_X5Y23          LUT1 (Prop_lut1_I0_O)        0.295     5.512 r  game_logic/i___41_carry_i_4/O
+                         net (fo=1, routed)           0.000     5.512    game_logic/i___41_carry_i_4_n_0
+    SLICE_X5Y23          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.062 r  game_logic/circle_x1_inferred__1/i___41_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.062    game_logic/circle_x1_inferred__1/i___41_carry_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.301 r  game_logic/circle_x1_inferred__1/i___41_carry__0/O[2]
+                         net (fo=3, routed)           0.437     6.739    game_logic/circle_x1_inferred__1/i___41_carry__0_n_5
+    SLICE_X7Y24          LUT3 (Prop_lut3_I0_O)        0.302     7.041 r  game_logic/i___69_carry_i_1/O
+                         net (fo=2, routed)           0.916     7.957    game_logic/i___69_carry_i_1_n_0
+    SLICE_X4Y24          LUT4 (Prop_lut4_I0_O)        0.124     8.081 r  game_logic/i___69_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.081    game_logic/i___69_carry_i_4_n_0
+    SLICE_X4Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.482 r  game_logic/circle_x1_inferred__1/i___69_carry/CO[3]
+                         net (fo=1, routed)           0.009     8.491    game_logic/circle_x1_inferred__1/i___69_carry_n_0
+    SLICE_X4Y25          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     8.713 r  game_logic/circle_x1_inferred__1/i___69_carry__0/O[0]
+                         net (fo=1, routed)           0.980     9.693    game_logic/circle_x1_inferred__1/i___69_carry__0_n_7
+    SLICE_X5Y22          LUT2 (Prop_lut2_I1_O)        0.299     9.992 r  game_logic/i___84_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     9.992    game_logic/i___84_carry__1_i_2_n_0
+    SLICE_X5Y22          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.572 f  game_logic/circle_x1_inferred__1/i___84_carry__1/O[2]
+                         net (fo=4, routed)           0.785    11.358    game_logic/circle_x1_inferred__1/i___84_carry__1_n_5
+    SLICE_X4Y22          LUT5 (Prop_lut5_I4_O)        0.331    11.689 r  game_logic/circle_x[1]_i_3/O
+                         net (fo=8, routed)           0.631    12.320    game_logic/circle_x[1]_i_3_n_0
+    SLICE_X3Y21          LUT6 (Prop_lut6_I4_O)        0.327    12.647 r  game_logic/circle_x[5]_i_4/O
+                         net (fo=5, routed)           0.780    13.427    game_logic/circle_x[5]_i_4_n_0
+    SLICE_X4Y23          LUT6 (Prop_lut6_I4_O)        0.124    13.551 r  game_logic/circle_x[5]_i_1/O
+                         net (fo=1, routed)           0.000    13.551    game_logic/circle_x[5]_i_1_n_0
+    SLICE_X4Y23          FDCE                                         r  game_logic/circle_x_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/rand_seed_reg[6]/C
+                            (rising edge-triggered cell FDPE)
+  Destination:            game_logic/circle_x_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.455ns  (logic 5.429ns (40.350%)  route 8.026ns (59.650%))
+  Logic Levels:           18  (CARRY4=8 FDPE=1 LUT1=1 LUT2=1 LUT3=2 LUT4=3 LUT5=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y21          FDPE                         0.000     0.000 r  game_logic/rand_seed_reg[6]/C
+    SLICE_X8Y21          FDPE (Prop_fdpe_C_Q)         0.518     0.518 r  game_logic/rand_seed_reg[6]/Q
+                         net (fo=11, routed)          1.090     1.608    game_logic/rand_seed[6]
+    SLICE_X7Y22          LUT3 (Prop_lut3_I0_O)        0.124     1.732 r  game_logic/i___0_carry__0_i_3/O
+                         net (fo=2, routed)           0.881     2.614    game_logic/i___0_carry__0_i_3_n_0
+    SLICE_X6Y22          LUT4 (Prop_lut4_I3_O)        0.124     2.738 r  game_logic/i___0_carry__0_i_7/O
+                         net (fo=1, routed)           0.000     2.738    game_logic/i___0_carry__0_i_7_n_0
+    SLICE_X6Y22          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     3.271 r  game_logic/circle_x1_inferred__1/i___0_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     3.271    game_logic/circle_x1_inferred__1/i___0_carry__0_n_0
+    SLICE_X6Y23          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     3.388 r  game_logic/circle_x1_inferred__1/i___0_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     3.388    game_logic/circle_x1_inferred__1/i___0_carry__1_n_0
+    SLICE_X6Y24          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     3.607 f  game_logic/circle_x1_inferred__1/i___0_carry__2/O[0]
+                         net (fo=10, routed)          1.610     5.217    game_logic/circle_x1_inferred__1/i___0_carry__2_n_7
+    SLICE_X5Y23          LUT1 (Prop_lut1_I0_O)        0.295     5.512 r  game_logic/i___41_carry_i_4/O
+                         net (fo=1, routed)           0.000     5.512    game_logic/i___41_carry_i_4_n_0
+    SLICE_X5Y23          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     6.062 r  game_logic/circle_x1_inferred__1/i___41_carry/CO[3]
+                         net (fo=1, routed)           0.000     6.062    game_logic/circle_x1_inferred__1/i___41_carry_n_0
+    SLICE_X5Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     6.301 r  game_logic/circle_x1_inferred__1/i___41_carry__0/O[2]
+                         net (fo=3, routed)           0.437     6.739    game_logic/circle_x1_inferred__1/i___41_carry__0_n_5
+    SLICE_X7Y24          LUT3 (Prop_lut3_I0_O)        0.302     7.041 r  game_logic/i___69_carry_i_1/O
+                         net (fo=2, routed)           0.916     7.957    game_logic/i___69_carry_i_1_n_0
+    SLICE_X4Y24          LUT4 (Prop_lut4_I0_O)        0.124     8.081 r  game_logic/i___69_carry_i_4/O
+                         net (fo=1, routed)           0.000     8.081    game_logic/i___69_carry_i_4_n_0
+    SLICE_X4Y24          CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     8.482 r  game_logic/circle_x1_inferred__1/i___69_carry/CO[3]
+                         net (fo=1, routed)           0.009     8.491    game_logic/circle_x1_inferred__1/i___69_carry_n_0
+    SLICE_X4Y25          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     8.713 r  game_logic/circle_x1_inferred__1/i___69_carry__0/O[0]
+                         net (fo=1, routed)           0.980     9.693    game_logic/circle_x1_inferred__1/i___69_carry__0_n_7
+    SLICE_X5Y22          LUT2 (Prop_lut2_I1_O)        0.299     9.992 r  game_logic/i___84_carry__1_i_2/O
+                         net (fo=1, routed)           0.000     9.992    game_logic/i___84_carry__1_i_2_n_0
+    SLICE_X5Y22          CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    10.572 f  game_logic/circle_x1_inferred__1/i___84_carry__1/O[2]
+                         net (fo=4, routed)           0.785    11.358    game_logic/circle_x1_inferred__1/i___84_carry__1_n_5
+    SLICE_X4Y22          LUT5 (Prop_lut5_I4_O)        0.331    11.689 r  game_logic/circle_x[1]_i_3/O
+                         net (fo=8, routed)           1.033    12.722    game_logic/circle_x[1]_i_3_n_0
+    SLICE_X2Y21          LUT4 (Prop_lut4_I1_O)        0.327    13.049 r  game_logic/circle_x[2]_i_3/O
+                         net (fo=1, routed)           0.282    13.331    game_logic/circle_x[2]_i_3_n_0
+    SLICE_X2Y21          LUT6 (Prop_lut6_I5_O)        0.124    13.455 r  game_logic/circle_x[2]_i_1/O
+                         net (fo=1, routed)           0.000    13.455    game_logic/circle_x[2]_i_1_n_0
+    SLICE_X2Y21          FDCE                                         r  game_logic/circle_x_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 vga/v_count_next_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            vga/v_count_reg_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.232ns  (logic 0.141ns (60.749%)  route 0.091ns (39.251%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y12          FDCE                         0.000     0.000 r  vga/v_count_next_reg[2]/C
+    SLICE_X7Y12          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  vga/v_count_next_reg[2]/Q
+                         net (fo=1, routed)           0.091     0.232    vga/v_count_next[2]
+    SLICE_X6Y12          FDCE                                         r  vga/v_count_reg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 vga/h_count_next_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            vga/h_count_reg_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.245ns  (logic 0.128ns (52.349%)  route 0.117ns (47.651%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y16          FDCE                         0.000     0.000 r  vga/h_count_next_reg[1]/C
+    SLICE_X3Y16          FDCE (Prop_fdce_C_Q)         0.128     0.128 r  vga/h_count_next_reg[1]/Q
+                         net (fo=1, routed)           0.117     0.245    vga/h_count_next[1]
+    SLICE_X4Y16          FDCE                                         r  vga/h_count_reg_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/current_score_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            game_logic/score_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.251ns  (logic 0.148ns (58.944%)  route 0.103ns (41.056%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y20         FDCE                         0.000     0.000 r  game_logic/current_score_reg[2]/C
+    SLICE_X64Y20         FDCE (Prop_fdce_C_Q)         0.148     0.148 r  game_logic/current_score_reg[2]/Q
+                         net (fo=6, routed)           0.103     0.251    game_logic/current_score_reg[2]
+    SLICE_X65Y20         FDCE                                         r  game_logic/score_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 vga/h_count_next_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            vga/h_count_reg_reg[2]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.258ns  (logic 0.141ns (54.706%)  route 0.117ns (45.294%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y16          FDCE                         0.000     0.000 r  vga/h_count_next_reg[2]/C
+    SLICE_X3Y16          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  vga/h_count_next_reg[2]/Q
+                         net (fo=1, routed)           0.117     0.258    vga/h_count_next[2]
+    SLICE_X4Y16          FDCE                                         r  vga/h_count_reg_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 vga/v_count_next_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            vga/v_count_reg_reg[5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.263ns  (logic 0.141ns (53.591%)  route 0.122ns (46.409%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y12          FDCE                         0.000     0.000 r  vga/v_count_next_reg[5]/C
+    SLICE_X7Y12          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  vga/v_count_next_reg[5]/Q
+                         net (fo=1, routed)           0.122     0.263    vga/v_count_next[5]
+    SLICE_X6Y12          FDCE                                         r  vga/v_count_reg_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 vga/h_count_next_reg[9]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            vga/h_count_reg_reg[9]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.265ns  (logic 0.164ns (61.886%)  route 0.101ns (38.114%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y17          FDCE                         0.000     0.000 r  vga/h_count_next_reg[9]/C
+    SLICE_X2Y17          FDCE (Prop_fdce_C_Q)         0.164     0.164 r  vga/h_count_next_reg[9]/Q
+                         net (fo=1, routed)           0.101     0.265    vga/h_count_next[9]
+    SLICE_X1Y17          FDCE                                         r  vga/h_count_reg_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/rand_seed_reg[12]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            game_logic/rand_seed_reg[13]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.275ns  (logic 0.141ns (51.210%)  route 0.134ns (48.790%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X5Y23          FDCE                         0.000     0.000 r  game_logic/rand_seed_reg[12]/C
+    SLICE_X5Y23          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  game_logic/rand_seed_reg[12]/Q
+                         net (fo=7, routed)           0.134     0.275    game_logic/rand_seed[12]
+    SLICE_X5Y24          FDPE                                         r  game_logic/rand_seed_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/current_score_reg[6]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            game_logic/score_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.291ns  (logic 0.164ns (56.305%)  route 0.127ns (43.695%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y21         FDCE                         0.000     0.000 r  game_logic/current_score_reg[6]/C
+    SLICE_X64Y21         FDCE (Prop_fdce_C_Q)         0.164     0.164 r  game_logic/current_score_reg[6]/Q
+                         net (fo=3, routed)           0.127     0.291    game_logic/current_score_reg[6]
+    SLICE_X65Y21         FDCE                                         r  game_logic/score_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 game_logic/current_score_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            game_logic/score_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.303ns  (logic 0.164ns (54.093%)  route 0.139ns (45.907%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y20         FDCE                         0.000     0.000 r  game_logic/current_score_reg[3]/C
+    SLICE_X64Y20         FDCE (Prop_fdce_C_Q)         0.164     0.164 r  game_logic/current_score_reg[3]/Q
+                         net (fo=5, routed)           0.139     0.303    game_logic/current_score_reg[3]
+    SLICE_X65Y20         FDCE                                         r  game_logic/score_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 vga/h_count_next_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            vga/h_count_reg_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.305ns  (logic 0.128ns (42.011%)  route 0.177ns (57.989%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y16          FDCE                         0.000     0.000 r  vga/h_count_next_reg[3]/C
+    SLICE_X3Y16          FDCE (Prop_fdce_C_Q)         0.128     0.128 r  vga/h_count_next_reg[3]/Q
+                         net (fo=1, routed)           0.177     0.305    vga/h_count_next[3]
+    SLICE_X4Y16          FDCE                                         r  vga/h_count_reg_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+

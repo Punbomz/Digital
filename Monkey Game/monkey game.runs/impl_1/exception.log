@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file E:\University\Digital\monkey game\monkey game.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Permission denied
